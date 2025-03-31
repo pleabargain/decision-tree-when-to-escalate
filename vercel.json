@@ -1,16 +1,3 @@
 {
-  "rootDirectory": "decision-tree-app",
-  "version": 2,
-  "builds": [
-    {
-      "src": "decision-tree-app/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/decision-tree-app/$1"
-    }
-  ]
+  "rootDirectory": "decision-tree-app"
 }
