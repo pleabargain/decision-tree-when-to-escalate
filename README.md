@@ -2,6 +2,11 @@
 https://github.com/pleabargain/decision-tree-when-to-escalate
 
 
+# notes
+I had intended to host this on Vercel but for reasons that escape me, this will only run locally. 
+
+See below.
+
 # Issue Escalation Decision Tree
 
 A web application that guides users through a series of questions to determine whether an issue should be escalated to management. Built with Next.js, TypeScript, Tailwind CSS, and Supabase.
