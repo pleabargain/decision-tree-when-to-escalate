@@ -1,3 +1,4 @@
+
 # Issue Escalation Decision Tree
 
 A web application that guides users through a series of questions to determine whether an issue should be escalated to management. Built with Next.js, TypeScript, Tailwind CSS, and Supabase.
@@ -74,18 +75,31 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 
 ## Deployment
 
-For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+For detailed deployment instructions, see:
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Comprehensive deployment guide
+- [DEPLOYMENT_STEPS.md](./DEPLOYMENT_STEPS.md) - Step-by-step checklist for deployment
 
 ### Quick Deployment Steps
+
+#### Local Testing
+1. Update the `.env.local` file with your Supabase credentials
+2. Run the test script:
+   - For Windows: `test-local.bat`
+   - For Unix/Linux/Mac: `./test-local.sh` (make executable with `chmod +x test-local.sh` first)
+3. Verify the application works correctly at http://localhost:3000
 
 #### Supabase
 1. Create a new Supabase project
 2. Run the SQL script in `supabase/schema.sql` to set up the database schema
 3. Get your Supabase URL and anon key from the API settings
 
+#### GitHub
+1. Create a new GitHub repository
+2. Push your local repository to GitHub using the commands provided after running the init-git script
+
 #### Vercel
-1. Push your code to a GitHub, GitLab, or Bitbucket repository
-2. Import the project in Vercel
+1. Import your GitHub repository in Vercel
+2. Set the root directory to `decision-tree-app`
 3. Set the environment variables (`NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`)
 4. Deploy
 
@@ -104,8 +118,15 @@ decision-tree-app/
 ├── supabase/
 │   └── schema.sql        # Database schema
 ├── public/               # Static assets
+├── .env.local            # Environment variables for local development
 ├── .env.local.example    # Example environment variables
-├── DEPLOYMENT.md         # Detailed deployment instructions
+├── DEPLOYMENT.md         # Comprehensive deployment guide
+├── DEPLOYMENT_STEPS.md   # Step-by-step deployment checklist
+├── TESTING.md            # Testing instructions
+├── init-git.sh           # Git initialization script for Unix/Linux/Mac
+├── init-git.bat          # Git initialization script for Windows
+├── test-local.sh         # Local testing script for Unix/Linux/Mac
+├── test-local.bat        # Local testing script for Windows
 ├── next.config.js        # Next.js configuration
 ├── tailwind.config.js    # Tailwind CSS configuration
 ├── tsconfig.json         # TypeScript configuration
