@@ -1,5 +1,3 @@
 {
-  "outputDirectory": "decision-tree-app/.next",
-  "buildCommand": "cd decision-tree-app && npm run build",
-  "installCommand": "cd decision-tree-app && npm install"
+  "rootDirectory": "decision-tree-app"
 }
